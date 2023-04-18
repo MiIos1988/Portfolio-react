@@ -2,7 +2,9 @@ import HomePageComponent from "./pages/HomePageComponent";
 
 function App() {
   return (
-    <HomePageComponent/>
+    <>
+      <HomePageComponent />
+    </>
   );
 }
 

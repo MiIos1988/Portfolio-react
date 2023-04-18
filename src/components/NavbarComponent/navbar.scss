@@ -1,0 +1,28 @@
+.navbarAll {
+    padding: 1.5rem 0 !important;
+
+    .navLink a {
+        font-weight: 600;
+        color: black;
+        font-size: 2rem;
+        padding: .8rem 2rem !important;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(155, 155, 155, 1), inset 0 0 10px rgba(85, 85, 85, 0.5);
+            // transform: translateY(2px);
+            background-color: white;
+        }
+    }
+
+    .active {
+        box-shadow: 0 0 20px rgba(155, 155, 155, 1), inset 0 0 10px rgba(85, 85, 85, 0.5);
+        // transform: translateY(2px);
+        background-color: white;
+    }
+
+    .logo {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3rem;
+    }
+}
