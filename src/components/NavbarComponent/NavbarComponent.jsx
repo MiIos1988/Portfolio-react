@@ -18,9 +18,6 @@ const NavbarComponent = () => {
                             HOME
                         </Nav.Link>
                         <Nav.Link className="mx-2 px-3" href="#link">
-                            ABOUT
-                        </Nav.Link>
-                        <Nav.Link className="mx-2 px-3" href="#link">
                             SKILLS
                         </Nav.Link>
                         <Nav.Link className="mx-2 px-3" href="#link">

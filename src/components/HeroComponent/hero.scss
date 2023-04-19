@@ -1,5 +1,70 @@
 .hero {
     margin-top: 100px;
+    width: 100%;
+
+    div {
+        width: 50%;
+    }
+
+    .heroDiv {
+        border-radius: 50%;
+        // border: 1px solid black;
+        // width: 500px;
+        // height: 500px;
+        padding: 2rem;
+        margin-top: 50px;
+        box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+        ;
+
+        img {
+            width: 80%;
+            height: 80%;
+            // object-fit: cover;
+        }
+    }
+
+    .heroTitle {
+        // margin-top: 2rem;
+
+        h2 {
+            font-size: 4.8rem;
+            font-weight: 700;
+            margin-top: 8rem;
+            // margin-bottom: 2rem;
+
+            span {
+                padding-bottom: 2rem;
+
+            }
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-color-web);
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            padding-right: 2rem;
+        }
+    }
+
+    .downloadCv {
+        font-weight: 600;
+        color: var(--text-color) !important;
+        font-size: 2rem;
+        padding: 0.8rem 2rem !important;
+        width: 200px;
+        border: none;
+        box-shadow:
+            -5px -5px 20px white,
+            5px 5px 10px rgba(155, 155, 155, .5),
+            inset 5px 5px 10px rgba(155, 155, 155, .5),
+            inset -5px -5px 10px white;
+
+    }
 
 }
 
