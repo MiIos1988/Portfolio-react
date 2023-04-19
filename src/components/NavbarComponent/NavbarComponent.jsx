@@ -7,10 +7,11 @@ import DayNightComponent from "./component/DayNightcomponent";
 const NavbarComponent = () => {
     return (
         <Navbar expand="md" className="navbarAll">
-            <Container>
+            <Container className="p-0 contNav">
                 <Navbar.Brand className="logo " href="#home">
                     <img src={logoImg} alt="" />
                 </Navbar.Brand>
+
                 <Navbar.Collapse id="basic-navbar-nav ">
                     <Nav className="ms-auto justify-content-center navLink">
                         <Nav.Link className="mx-2 px-3 " href="#home">
@@ -30,7 +31,7 @@ const NavbarComponent = () => {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center btnNav">
 
                     <DayNightComponent />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
