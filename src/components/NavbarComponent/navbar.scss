@@ -18,10 +18,10 @@
 
         &:hover {
             box-shadow:
-                -5px -5px 20px white,
+                -5px -5px 20px var(--shadow-one),
                 5px 5px 10px rgba(155, 155, 155, .5),
                 inset 5px 5px 10px rgba(155, 155, 155, .5),
-                inset -5px -5px 10px white;
+                inset -5px -5px 10px var(--shadow-one);
         }
     }
 
@@ -86,10 +86,6 @@
         padding: 1rem 0 !important;
         box-shadow: none;
     }
-
-    // .btnNav {
-    //     padding-right: 5px;
-    // }
 
     .navLink {
         background-color: var(--background-color) !important;

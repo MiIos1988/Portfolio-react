@@ -8,13 +8,10 @@
 
     .heroDiv {
         border-radius: 50%;
-        // border: 1px solid black;
-        // width: 500px;
-        // height: 500px;
         padding: 2rem;
-        margin-top: 50px;
-        box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
-        ;
+        margin: 100px 0;
+        box-shadow: 6px 6px 12px var(--shadow-one), -6px -6px 12px var(--shadow-two) !important;
+        // #b8b9be
 
         img {
             width: 80%;
@@ -51,19 +48,26 @@
         }
     }
 
-    .downloadCv {
+    .btnColor {
         font-weight: 600;
         color: var(--text-color) !important;
+        background-color: var(--background-color) !important;
         font-size: 2rem;
         padding: 0.8rem 2rem !important;
         width: 200px;
         border: none;
         box-shadow:
-            -5px -5px 20px white,
+            -5px -5px 20px var(--shadow-one),
             5px 5px 10px rgba(155, 155, 155, .5),
             inset 5px 5px 10px rgba(155, 155, 155, .5),
-            inset -5px -5px 10px white;
+            inset -5px -5px 10px var(--shadow-one);
+    }
 
+    .downloadCv:hover {
+        box-shadow:
+            -5px -5px 20px var(--shadow-one),
+            inset 5px 5px 10px rgba(155, 155, 155, .5),
+            inset -5px -5px 10px var(--shadow-one);
     }
 
 }
