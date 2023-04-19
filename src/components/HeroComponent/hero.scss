@@ -1,80 +1,151 @@
 .hero {
-    margin-top: 100px;
-    width: 100%;
+  margin-top: 100px;
+  width: 100%;
 
-    div {
-        width: 50%;
+  div {
+    width: 50%;
+  }
+
+  .heroDiv {
+    border-radius: 50%;
+    padding: 2rem;
+    margin: 100px 0;
+    box-shadow: 6px 6px 12px var(--shadow-one), -6px -6px 12px var(--shadow-two) !important;
+    position: relative;
+
+    img {
+      width: 80%;
+      height: 80%;
+      // object-fit: cover;
     }
 
-    .heroDiv {
+    .nodeJsIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .reactIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .expressIcon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .mongoIcon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .heroIcon {
+      font-size: 11rem;
+
+      li > svg {
         border-radius: 50%;
-        padding: 2rem;
-        margin: 100px 0;
-        box-shadow: 6px 6px 12px var(--shadow-one), -6px -6px 12px var(--shadow-two) !important;
-        // #b8b9be
-
-        img {
-            width: 80%;
-            height: 80%;
-            // object-fit: cover;
+        padding: 10px;
+        box-shadow: 6px 6px 12px var(--shadow-one),
+          -6px -6px 12px var(--shadow-two) !important;
+          animation: rotate360 4s ease-in-out infinite;
+        @keyframes rotate360 {
+            0%, 100% {
+                transform: rotate(0deg);
+              }
+              50% {
+                transform: rotate(360deg);
+              }
+              
         }
+      }
+    }
+  }
+
+  .heroTitle {
+
+    h2 {
+      font-size: 4.8rem;
+      font-weight: 700;
+      margin-top: 8rem;
+
+      span {
+        padding-bottom: 2rem;
+      }
     }
 
-    .heroTitle {
-        // margin-top: 2rem;
-
-        h2 {
-            font-size: 4.8rem;
-            font-weight: 700;
-            margin-top: 8rem;
-            // margin-bottom: 2rem;
-
-            span {
-                padding-bottom: 2rem;
-
-            }
-        }
-
-        h3 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--text-color-web);
-        }
-
-        p {
-            font-size: 1.8rem;
-            font-weight: 400;
-            padding-right: 2rem;
-        }
+    h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-color-web);
     }
 
-    .btnColor {
-        font-weight: 600;
-        color: var(--text-color) !important;
-        background-color: var(--background-color) !important;
-        font-size: 2rem;
-        padding: 0.8rem 2rem !important;
-        width: 200px;
-        border: none;
-        box-shadow:
-            -5px -5px 20px var(--shadow-one),
-            5px 5px 10px rgba(155, 155, 155, .5),
-            inset 5px 5px 10px rgba(155, 155, 155, .5),
-            inset -5px -5px 10px var(--shadow-one);
+    p {
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding-right: 2rem;
     }
+  }
 
-    .downloadCv:hover {
-        box-shadow:
-            -5px -5px 20px var(--shadow-one),
-            inset 5px 5px 10px rgba(155, 155, 155, .5),
-            inset -5px -5px 10px var(--shadow-one);
-    }
+  .btnColor {
+    font-weight: 600;
+    color: var(--text-color) !important;
+    background-color: var(--background-color) !important;
+    font-size: 2rem;
+    padding: 0.8rem 2rem !important;
+    width: 200px;
+    border: none;
+    box-shadow: -5px -5px 20px var(--shadow-one),
+      5px 5px 10px rgba(155, 155, 155, 0.5),
+      inset 5px 5px 10px rgba(155, 155, 155, 0.5),
+      inset -5px -5px 10px var(--shadow-one);
+  }
 
+  .downloadCv:hover {
+    box-shadow: -5px -5px 20px var(--shadow-one),
+      inset 5px 5px 10px rgba(155, 155, 155, 0.5),
+      inset -5px -5px 10px var(--shadow-one);
+  }
 }
 
-@media (max-width: 768px) {
-    .hero {
-        margin-top: 150px;
+@media (max-width: 992px) {
+    .hero{
+        flex-direction: column;
+        margin-bottom: 2rem;
+        div{
+            width: 100%;
+        }
 
+        .heroTitle {
+            padding: 10px;
+            
+            h2{
+                margin-top: 1rem;
+                font-size: 3.2rem;
+            }
+            h3{
+                font-size: 2.2rem;
+            }
+            p{
+                padding-right: 0;
+            }
+        }
+        .heroDiv{
+            margin-top: 20px;
+            width: 80%;
+            margin: auto;
+        }
     }
+  }
+  
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 576px) {
+ .hero .heroDiv .heroIcon {
+    font-size: 6rem;
+ }   
 }

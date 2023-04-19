@@ -11,14 +11,12 @@ const DayNightComponent = () => {
   const [shadowTwo, setShadowTwo] = useState("rgba(155, 155, 155, 0.5)");
 
   const handleChange = () => {
-    console.log(isChecked)
     setIsChecked(!isChecked);
     setBackground(isChecked ? "#e6e7ee " : "#212529")
     setColor(isChecked ? "#212529" : "#e6e7ee")
     setFilterInvert(!isChecked ? 100 : 0)
     setShadowOne(isChecked ? "#c7c7c7" : "black")
     setShadowTwo(isChecked ? "#fff" : "rgba(155, 155, 155, 0.5)")
-    console.log(shadowTwo)
     document.documentElement.style.setProperty('--text-color', color);
     document.documentElement.style.setProperty('--background-color', background);
     document.documentElement.style.setProperty('--filter-invert', filterInvert);
