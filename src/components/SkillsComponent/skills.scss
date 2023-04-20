@@ -1,16 +1,75 @@
-.skills{
-    text-align: center;
-    h2{
-        font-size: 4.8rem;
-      font-weight: 700;
-      padding-bottom: 2rem;
+.skills {
+  margin-top: 4rem;
+  text-align: center;
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-right: 2rem;
+  }
+
+  .skillSection {
+    width: 90px;
+
+    .icon {
+
+      margin: auto;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      // border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 6px 6px 12px var(--shadow-one),
+        -6px -6px 12px var(--shadow-two) !important;
+
+      &:hover {
+        box-shadow: 6px 6px 20px var(--shadow-one),
+          -6px -6px 20px var(--shadow-two) !important;
+      }
+
+      img {
+        width: 50%;
+        height: 50%;
+      }
     }
-    p {
-        font-size: 1.8rem;
-        font-weight: 400;
-        padding-right: 2rem;
+
+    .title {
+      text-align: center;
+
+      p {
+        padding: 0;
+        margin-top: 8px;
       }
-      .skillSection{
-        width: 90px;
-      }
+    }
+  }
+
+  @media (max-width: 992px) {
+
+    .skillTitle {
+      font-size: 3.8rem !important;
+
+    }
+  }
+
+  @media (max-width: 576px) {
+
+
+    .iconSkills {
+      gap: 2rem !important;
+    }
+
+    .icon {
+      width: 65px !important;
+      height: 65px !important;
+    }
+
+  }
 }
