@@ -2,7 +2,7 @@ import heroImg from "../../assets/img/hero-img.png";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
-import 'animate.css';
+import "animate.css";
 
 const HeroComponent = () => {
   return (
@@ -22,14 +22,24 @@ const HeroComponent = () => {
         </p>
         <button className="downloadCv btnColor">DOWNLOAD CV</button>
       </div>
-      <div className="heroDiv d-flex align-items-center justify-content-center">
-        <img src={heroImg} alt="" />
-        <ul className="heroIcon">
-            <li className="nodeJsIcon "><FaNodeJs className="rotate"/></li>
-            <li className="reactIcon "><FaReact className="rotate" /></li>
-            <li className="expressIcon "><SiExpress className="rotate" /></li>
-            <li className="mongoIcon "><DiMongodb  className="rotate"/></li>
-        </ul>
+      <div className="d-flex justify-content-center">
+        <div className="heroDiv d-flex align-items-center justify-content-center">
+          <img src={heroImg} alt="" />
+          <ul className="heroIcon">
+            <li className="nodeJsIcon ">
+              <FaNodeJs className="rotate" />
+            </li>
+            <li className="reactIcon ">
+              <FaReact className="rotate" />
+            </li>
+            <li className="expressIcon ">
+              <SiExpress className="rotate" />
+            </li>
+            <li className="mongoIcon ">
+              <DiMongodb className="rotate" />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

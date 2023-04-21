@@ -2,14 +2,15 @@
   margin-top: 100px;
   width: 100%;
 
-  div {
+  & > div {
     width: 50%;
   }
 
   .heroDiv {
+    width: 80%;
     border-radius: 50%;
     padding: 2rem;
-    margin: 100px 0;
+    margin: 12% 0;
     box-shadow: 6px 6px 12px var(--shadow-one), -6px -6px 12px var(--shadow-two) !important;
     position: relative;
 
@@ -21,32 +22,32 @@
 
     .nodeJsIcon {
       position: absolute;
-      top: 0;
-      left: 0;
+      bottom: 0;
+      right: 0;
     }
 
     .reactIcon {
       position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    .expressIcon {
-      position: absolute;
       bottom: 0;
       left: 0;
     }
 
+    .expressIcon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
     .mongoIcon {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      top: 0;
+      left: 0;
     }
 
     .heroIcon {
       font-size: 11rem;
 
-      li>svg {
+      li > svg {
         border-radius: 50%;
         padding: 10px;
         box-shadow: 6px 6px 12px var(--shadow-one),
@@ -54,7 +55,6 @@
         animation: rotate360 4s ease-in-out infinite;
 
         @keyframes rotate360 {
-
           0%,
           100% {
             transform: rotate(0deg);
@@ -63,7 +63,6 @@
           50% {
             transform: rotate(360deg);
           }
-
         }
       }
     }
@@ -71,13 +70,13 @@
 
   .heroTitle {
     .hello {
-      color: var(--text-color-hello)
+      color: var(--text-color-hello);
     }
 
     h2 {
       font-size: 4.8rem;
       font-weight: 700;
-      margin-top: 8rem;
+      // margin-top: 8rem;
 
       span {
         padding-bottom: 2rem;
@@ -151,7 +150,6 @@
     }
   }
 }
-
 
 @media (max-width: 768px) {
   .hero {
