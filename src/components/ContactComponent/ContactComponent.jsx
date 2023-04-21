@@ -10,18 +10,22 @@ const ContactComponent = () => {
             <article className = "d-flex justify-content-between">
                 <div className = "contactField">
                     <h3>Contact me</h3>
+                    <a href="mailto:vojvoda1988@gmail.com" target="_blank">
                     <div className="shadow">
-                        <AiOutlineMail/><br />
+                        <AiOutlineMail className="animate__animated animate__headShake animate__infinite"/><br />
                         <span>E-mail</span>
                         <p>vojvoda1988@gmail.com</p>
                         <p>Send message</p>
                     </div>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=381653737257">
                     <div className="shadow">
-                        <AiOutlineWhatsApp/><br />
+                        <AiOutlineWhatsApp className="animate__animated animate__headShake animate__infinite"/><br />
                         <span>WhatsApp</span>
                         <p>+381 65 37 37 257</p>
                         <p>Send message or call</p>
                     </div>
+                    </a>
 
                 </div>
                 <div className="formField ">
