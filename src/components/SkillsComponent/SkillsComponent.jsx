@@ -5,7 +5,7 @@ const SkillsComponent = () => {
   return (
     <div className="container skills">
       <h2 className="skillTitle">Skills & Technologies</h2>
-      <p>
+      <p className="mb-2">
         Below you can see my skills and technologies that I use every day. I am
         trying to keep up with the newest trends in the industry and to keep
         learning new skills and technologies as well as improving knowledge in

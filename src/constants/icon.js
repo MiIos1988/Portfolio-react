@@ -23,20 +23,36 @@ const skillsData = [
         title: "CSS3"
     },
     {
+        image: imgJavascript,
+        title: "JavaScript"
+    },
+    {
+        image: imgSass,
+        title: "SASS"
+    },
+    {
+        image: imgBootstrap,
+        title: "Bootstrap"
+    },
+    {
         image: imgGit,
         title: "Git"
     },
     {
-        image: imgJavascript,
-        title: "JavaScript"
+        image: imgGitHub,
+        title: "GitHub"
     },
     {
         image: imgReact,
         title: "React JS"
     },
     {
-        image: imgSass,
-        title: "SASS"
+        image: imgRedux,
+        title: "Redux"
+    },
+    {
+        image: imgStripe,
+        title: "Stripe"
     },
     {
         image: imgNode,
@@ -51,24 +67,8 @@ const skillsData = [
         title: "Mongo DB"
     },
     {
-        image: imgStripe,
-        title: "Stripe"
-    },
-    {
-        image: imgRedux,
-        title: "Redux"
-    },
-    {
-        image: imgBootstrap,
-        title: "Bootstrap"
-    },
-    {
         image: imgPostman,
         title: "Postman"
-    },
-    {
-        image: imgGitHub,
-        title: "GitHub"
     },
 ]
 

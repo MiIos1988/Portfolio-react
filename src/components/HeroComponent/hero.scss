@@ -24,16 +24,19 @@
       top: 0;
       left: 0;
     }
+
     .reactIcon {
       position: absolute;
       top: 0;
       right: 0;
     }
+
     .expressIcon {
       position: absolute;
       bottom: 0;
       left: 0;
     }
+
     .mongoIcon {
       position: absolute;
       bottom: 0;
@@ -43,26 +46,33 @@
     .heroIcon {
       font-size: 11rem;
 
-      li > svg {
+      li>svg {
         border-radius: 50%;
         padding: 10px;
         box-shadow: 6px 6px 12px var(--shadow-one),
           -6px -6px 12px var(--shadow-two) !important;
-          animation: rotate360 4s ease-in-out infinite;
+        animation: rotate360 4s ease-in-out infinite;
+
         @keyframes rotate360 {
-            0%, 100% {
-                transform: rotate(0deg);
-              }
-              50% {
-                transform: rotate(360deg);
-              }
-              
+
+          0%,
+          100% {
+            transform: rotate(0deg);
+          }
+
+          50% {
+            transform: rotate(360deg);
+          }
+
         }
       }
     }
   }
 
   .heroTitle {
+    .hello {
+      color: var(--text-color-hello)
+    }
 
     h2 {
       font-size: 4.8rem;
@@ -109,43 +119,48 @@
 }
 
 @media (max-width: 992px) {
-    .hero{
-        flex-direction: column;
-        margin-bottom: 2rem;
-        div{
-            width: 100%;
-        }
+  .hero {
+    flex-direction: column;
+    margin-bottom: 2rem;
 
-        .heroTitle {
-            padding: 10px;
-            
-            h2{
-                margin-top: 1rem;
-                font-size: 3.2rem;
-            }
-            h3{
-                font-size: 2.2rem;
-            }
-            p{
-                padding-right: 0;
-            }
-        }
-        .heroDiv{
-            margin-top: 20px;
-            width: 80%;
-            margin: auto;
-        }
+    div {
+      width: 100%;
+    }
+
+    .heroTitle {
+      padding: 10px;
+
+      h2 {
+        margin-top: 1rem;
+        font-size: 3.2rem;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        padding-right: 0;
+      }
+    }
+
+    .heroDiv {
+      margin-top: 20px;
+      width: 80%;
+      margin: auto;
     }
   }
-  
+}
+
 
 @media (max-width: 768px) {
   .hero {
     margin-top: 150px;
   }
 }
+
 @media (max-width: 576px) {
- .hero .heroDiv .heroIcon {
+  .hero .heroDiv .heroIcon {
     font-size: 6rem;
- }   
+  }
 }

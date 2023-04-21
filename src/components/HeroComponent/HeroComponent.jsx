@@ -9,7 +9,7 @@ const HeroComponent = () => {
     <div className="hero d-flex container justify-align-content-between gap-5">
       <div className=" heroTitle d-flex flex-column gap-3 justify-content-center">
         <h2>
-          <span className="mb-5">Hello,</span>
+          <span className="mb-5 hello">Hello,</span>
           <br />I Am Milos Sudimac
         </h2>
         <h3 className="animate__flipInX">Web Developer</h3>
