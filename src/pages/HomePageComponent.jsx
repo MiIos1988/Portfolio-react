@@ -1,3 +1,4 @@
+import ContactComponent from "../components/ContactComponent/ContactComponent";
 import HeroComponent from "../components/HeroComponent/HeroComponent";
 import NavbarComponent from "../components/NavbarComponent/NavbarComponent";
 import ProjectComponent from "../components/ProjectComponent/Projectcomponent";
@@ -10,6 +11,7 @@ const HomePageComponent = () => {
             <HeroComponent />
             <SkillsComponent />
             <ProjectComponent />
+            <ContactComponent/>
         </>
     )
 
