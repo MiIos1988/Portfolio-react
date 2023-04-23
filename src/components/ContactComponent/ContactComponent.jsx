@@ -1,8 +1,26 @@
 import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
-import { RiSendPlane2Line } from "react-icons/ri";
 import "animate.css";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactComponent = () => {
+    const form = useRef();
+    
+      const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm("service_lh8wnxe",
+        "template_w453x57",
+        form.current,
+        "H2rjiBjduKIpByjJq")
+          .then((result) => {
+              console.log(result.text);
+              form.current.reset();
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
+
   return (
     <section id="contact" className="container contact">
       <h2>Need a web developer</h2>
@@ -29,7 +47,7 @@ const ContactComponent = () => {
           </a>
         </div>
         <div className="formField ">
-          <form action="">
+          <form ref={form} onSubmit={sendEmail}>
             <div className="position-relative">
               <label className="labName p-2">Name</label>
               <input
@@ -57,7 +75,7 @@ const ContactComponent = () => {
                 rows="7"
               ></textarea>
             </div>
-            <button className="btn">Send message</button>
+            <button type="submit" className="btn">Send message</button>
           </form>
         </div>
       </article>
