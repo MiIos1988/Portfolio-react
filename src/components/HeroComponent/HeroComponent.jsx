@@ -2,11 +2,12 @@ import heroImg from "../../assets/img/hero-img.png";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
+import { BiDownload } from "react-icons/bi";
 import "animate.css";
 
 const HeroComponent = () => {
   return (
-    <div className="hero d-flex container justify-align-content-between gap-5">
+    <div id="home" className="hero d-flex container justify-align-content-between gap-5">
       <div className=" heroTitle d-flex flex-column gap-3 justify-content-center">
         <h2>
           <span className="mb-5 hello">Hello,</span>
@@ -20,7 +21,10 @@ const HeroComponent = () => {
           to utilize my knowledge and skills in the best possible way for the
           fulfillment of organizational goals.
         </p>
-        <button className="downloadCv btnColor">DOWNLOAD CV</button>
+        <button className="downloadCv btnColor">
+          DOWNLOAD CV{" "}
+          <BiDownload className="animate__animated animate__flash animate__infinite animate__slow" />
+        </button>
       </div>
       <div className="d-flex justify-content-center">
         <div className="heroDiv d-flex align-items-center justify-content-center">

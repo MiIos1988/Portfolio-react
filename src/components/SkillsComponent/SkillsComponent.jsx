@@ -3,7 +3,7 @@ import dataSkills from "../../constants/icon";
 
 const SkillsComponent = () => {
   return (
-    <div className="container skills">
+    <div id="skills" className="container skills">
       <h2 className="skillTitle">Skills & Technologies</h2>
       <p className="mb-2">
         Below you can see my skills and technologies that I use every day. I am

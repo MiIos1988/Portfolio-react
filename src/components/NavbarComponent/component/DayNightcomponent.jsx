@@ -43,6 +43,7 @@ const DayNightComponent = () => {
           unchecked: <span className="night">🌞</span>,
         }}
         aria-label="Toggle theme"
+        className="toggle"
       />
     </div>
   );

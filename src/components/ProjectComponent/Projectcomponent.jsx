@@ -4,8 +4,8 @@ import OneProjectComponent from "./component/OneProjectComponent.jsx"
 const ProjectComponent = () => {
 
     return (
-        <div className="container project">
-            <h2 className="projectTitle mb-5">My work showkase</h2>
+        <div id="portfolio" className="container project">
+            <h2 className="projectTitle mb-5">My work showcase</h2>
             <div className=" d-flex  mt-2 flex-wrap justify-content-between" >
                 {
                     data.map((el, index) => {
