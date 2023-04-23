@@ -7,7 +7,7 @@ const ContactComponent = () => {
     return(
         <section className="container contact">
             <h2>Need a web developer</h2>
-            <article className = "d-flex justify-content-between">
+            <article className = "d-flex justify-content-between contactDiv">
                 <div className = "contactField">
                     <h3>Contact me</h3>
                     <a href="mailto:vojvoda1988@gmail.com" target="_blank">
