@@ -33,7 +33,7 @@
       font-size: 1.8rem;
       max-height: 135px;
       padding-right: 5px;
-      overflow-y:auto;
+      overflow-y: auto;
       &::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -46,7 +46,6 @@
       &::-webkit-scrollbar-track {
         background-color: #f2f2f2;
       }
-      
     }
 
     .blockTags {
@@ -76,5 +75,16 @@
         border-radius: 50%;
       }
     }
+  }
+}
+@media (max-width: 1400px) {
+  .product {
+    width: 47% !important;
+  }
+}
+@media (max-width: 768px) {
+  .product {
+    width: 90% !important;
+    margin: auto;
   }
 }
