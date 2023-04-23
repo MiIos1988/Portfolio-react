@@ -18,7 +18,6 @@
     width: 90px;
 
     .icon {
-
       margin: auto;
       width: 90px;
       height: 90px;
@@ -31,8 +30,8 @@
         -6px -6px 12px var(--shadow-two) !important;
 
       &:hover {
-        box-shadow: 6px 6px 20px var(--shadow-one),
-          -6px -6px 20px var(--shadow-two) !important;
+        box-shadow: 6px 6px 12px var(--text-color-hello),
+          -6px -6px 12px var(--shadow-two) !important;
       }
 
       img {
@@ -53,16 +52,12 @@
   }
 
   @media (max-width: 992px) {
-
     .skillTitle {
       font-size: 3.8rem !important;
-
     }
   }
 
   @media (max-width: 576px) {
-
-
     .iconSkills {
       gap: 2rem !important;
     }
@@ -71,6 +66,5 @@
       width: 65px !important;
       height: 65px !important;
     }
-
   }
 }

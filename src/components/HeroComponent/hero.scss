@@ -98,7 +98,7 @@
 
   .btnColor {
     font-weight: 600;
-    color: var(--text-color) !important;
+    color: var(--text-color-hello) !important;
     background-color: var(--background-color) !important;
     font-size: 2rem;
     padding: 0.8rem 2rem !important;
@@ -111,9 +111,8 @@
   }
 
   .downloadCv:hover {
-    box-shadow: -5px -5px 20px var(--shadow-one),
-      inset 5px 5px 10px rgba(155, 155, 155, 0.5),
-      inset -5px -5px 10px var(--shadow-one);
+    box-shadow: 6px 6px 12px var(--text-color-hello),
+      -6px -6px 12px var(--shadow-two) !important;
   }
 }
 
