@@ -120,15 +120,22 @@
 
   .iconSocial {
 
-    // width: 220px;
+    width: 220px;
+
+    div {
+
+      text-align: center;
+    }
+
+
     a {
 
       svg {
         font-size: 4rem;
         color: var(--text-color);
-        margin: 2rem;
+        margin: 1rem;
       }
-      
+
     }
 
   }

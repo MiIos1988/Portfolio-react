@@ -29,12 +29,15 @@ const HeroComponent = () => {
           <BiDownload className="animate__animated animate__flash animate__infinite animate__slow" />
         </button>
         <div className="iconSocial">
+          <div>
+
           <a href="https://github.com/VojvodaMilos" target="_blank">
             <BsGithub />
           </a>
           <a href="https://github.com/VojvodaMilos" target="_blank">
             <BsLinkedin />
           </a>
+          </div>
         </div>
 
 
