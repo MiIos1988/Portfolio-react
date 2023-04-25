@@ -17,7 +17,7 @@ const data = [
     title: "E-shop",
     desc: "Full featured e-commerce store built with MERN stack and Paypal payments API. Admin page to manage customers, products & orders.",
     tags: ["React", "Redux", "NodeJs", "MongoDB", "JWT", "Express"],
-    github: "https://github.com/VojvodaMilos/My_shop",
+    github: "https://github.com/MiIos1988/My_shop",
     live: "https://frontend-my-shop.vercel.app/",
   },
   {
@@ -25,7 +25,7 @@ const data = [
     title: "Bank app",
     desc: "Entering user data and records of entered data that the user can modify or delete.",
     tags: ["React"],
-    github: "https://github.com/VojvodaMilos/bank-app",
+    github: "https://github.com/MiIos1988/bank-app",
     live: "https://bank-app-lovat.vercel.app/",
   },
   {
@@ -33,7 +33,7 @@ const data = [
     title: "Blog post app",
     desc: "Choose a category and the application will show you all the posts from the selected category. Also, within a post, you can choose a category.",
     tags: ["React"],
-    github: "https://github.com/VojvodaMilos/post-app-react",
+    github: "https://github.com/MiIos1988/post-app-react",
     live: "https://post-app-react-phi.vercel.app/",
   },
   {
@@ -41,7 +41,7 @@ const data = [
     title: "Stopwatch",
     desc: "The stopwatch features time measurement, pause and  reset. This project allowed me to practice manipulating component state in React.js and improving my overall React.js development skills.",
     tags: ["React"],
-    github: "https://github.com/VojvodaMilos/stopwatch",
+    github: "https://github.com/MiIos1988/stopwatch",
     live: "https://stopwatch-five-beta.vercel.app/",
   },
   {
@@ -49,7 +49,7 @@ const data = [
     title: "Quiz",
     desc: " The quiz is designed to test users knowledge on a specific topic and features multiple-choice questions and a final score display.",
     tags: ["React"],
-    github: "https://github.com/VojvodaMilos/quiz",
+    github: "https://github.com/MiIos1988/quiz",
     live: "https://quiz-livid-chi.vercel.app/",
   },
   {
@@ -57,7 +57,7 @@ const data = [
     title: "Rock paper scissors",
     desc: "The game allows users to play against the computer, selecting their choice of rock, paper, or scissors.  Additionally, the game keeps track of the user's score and displays it at the end of each round. ",
     tags: ["React"],
-    github: "https://github.com/VojvodaMilos/rock-paper-scissors",
+    github: "https://github.com/MiIos1988/rock-paper-scissors",
     live: "https://rock-paper-scissors-ten-pi.vercel.app/",
   },
   {
@@ -65,7 +65,7 @@ const data = [
     title: "Chess - movement of pieces",
     desc: "The application allows users to move chess pieces on a virtual board according to the rules of the game. Additionally, the application includes a feature that highlights the possible moves for each piece, helping users learn the game and make informed decisions.",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/Chess",
+    github: "https://github.com/MiIos1988/Chess",
     live: "https://chess-six-sage.vercel.app/",
   },
   {
@@ -73,7 +73,7 @@ const data = [
     title: "Calculator",
     desc: "Calculator App with vanilla JS. Simple app with basic arithmetic operations.",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/calculator",
+    github: "https://github.com/MiIos1988/calculator",
     live: "https://calculate-navy.vercel.app/",
   },
   {
@@ -81,7 +81,7 @@ const data = [
     title: "Analog clock",
     desc: "This application is an analog clock that displays the current time in a format similar to a classic analog clock. It allows users to track the exact time in real time. ",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/analogClock",
+    github: "https://github.com/MiIos1988/analogClock",
     live: "https://analog-clock-nu.vercel.app/",
   },
   {
@@ -89,7 +89,7 @@ const data = [
     title: "Hangman game",
     desc: "The game is a classic word-guessing game where the player tries to guess a hidden word by guessing one letter at a time. This project allowed me to further develop my skills in JavaScript.",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/Hangman_game",
+    github: "https://github.com/MiIos1988/Hangman_game",
     live: "https://hangman-game-liart-one.vercel.app/",
   },
   {
@@ -97,7 +97,7 @@ const data = [
     title: "Tic-Tac-Toe Artificial intelligence",
     desc: "Play Tic-Tac-Toe game against the computer and try to beat the artificial intelligence.",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/Tic-Tac-Toe-artificial-intelligence",
+    github: "https://github.com/MiIos1988/Tic-Tac-Toe-artificial-intelligence",
     live: "https://new-tic-tac-toe-chi.vercel.app/",
   },
   {
@@ -105,7 +105,7 @@ const data = [
     title: "Gallery",
     desc: "As part of my portfolio, I created an gallery using HTML, CSS, and JavaScript. The gallery features a responsive layout with arrow buttons that allow users to cycle through the images.",
     tags: ["Javascript"],
-    github: "https://github.com/VojvodaMilos/background-slider",
+    github: "https://github.com/MiIos1988/background-slider",
     live: "https://background-slider-opal.vercel.app/",
   },
 ];

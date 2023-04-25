@@ -27,12 +27,12 @@ const ContactComponent = () => {
       <article className="d-flex justify-content-between contactDiv">
         <div className="contactField">
           <h3>Contact me</h3>
-          <a href="mailto:vojvoda1988@gmail.com" target="_blank">
+          <a href="mailto:milossudimac1988@gmail.com" target="_blank">
             <div className="shadow">
               <AiOutlineMail className="animate__animated animate__headShake animate__infinite" />
               <br />
               <span>E-mail</span>
-              <p>vojvoda1988@gmail.com</p>
+              <p>milossudimac1988@gmail.com</p>
               <p>Send message</p>
             </div>
           </a>

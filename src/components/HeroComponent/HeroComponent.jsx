@@ -31,10 +31,10 @@ const HeroComponent = () => {
         <div className="iconSocial">
           <div>
 
-          <a href="https://github.com/VojvodaMilos" target="_blank">
+          <a href="https://github.com/MiIos1988" target="_blank">
             <BsGithub />
           </a>
-          <a href="https://github.com/VojvodaMilos" target="_blank">
+          <a href="https://github.com/MiIos1988" target="_blank">
             <BsLinkedin />
           </a>
           </div>
