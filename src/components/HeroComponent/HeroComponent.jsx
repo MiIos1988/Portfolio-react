@@ -3,6 +3,9 @@ import { FaNodeJs, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
 import { BiDownload } from "react-icons/bi";
+import { BsLinkedin } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+
 import "animate.css";
 
 const HeroComponent = () => {
@@ -25,6 +28,16 @@ const HeroComponent = () => {
           DOWNLOAD CV{" "}
           <BiDownload className="animate__animated animate__flash animate__infinite animate__slow" />
         </button>
+        <div className="iconSocial">
+          <a href="https://github.com/VojvodaMilos" target="_blank">
+            <BsGithub />
+          </a>
+          <a href="https://github.com/VojvodaMilos" target="_blank">
+            <BsLinkedin />
+          </a>
+        </div>
+
+
       </div>
       <div className="d-flex justify-content-center">
         <div className="heroDiv d-flex align-items-center justify-content-center">
