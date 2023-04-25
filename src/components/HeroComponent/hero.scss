@@ -119,12 +119,11 @@
   }
 
   .iconSocial {
-
-    width: 220px;
-
-    div {
-
+    // width: 100% !important;
+    
+    div{
       text-align: center;
+      width: 220px;
     }
 
 
@@ -179,6 +178,9 @@
 
       .iconSocial {
         text-align: center;
+        div{
+          margin: auto;
+        }
       }
     }
 
