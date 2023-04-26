@@ -10,11 +10,18 @@ const DayNightComponent = () => {
   const [filterInvert, setFilterInvert] = useState(100);
   const [shadowOne, setShadowOne] = useState("black");
   const [shadowTwo, setShadowTwo] = useState("rgba(155, 155, 155, 0.5)");
-  let setInLocalStorage = true;
+  let setInLocalStorage = false;
 
   useEffect(() => {
-    !localStorage.getItem("theme") && localStorage.setItem("theme", "light")
+    if(!localStorage.getItem("theme")) { 
+      localStorage.setItem("theme", "light") 
+    } else if(localStorage.getItem("theme") === "light"){
+      setInLocalStorage = false;
+    }else{
+       setInLocalStorage = true
+    }
     setInLocalStorage && handleChange()
+    
 
   }, []
   )
@@ -28,6 +35,7 @@ const DayNightComponent = () => {
     setShadowOne(isChecked ? "#c7c7c7" : "black");
     setShadowTwo(isChecked ? "#fff" : "rgba(155, 155, 155, 0.5)");
     changeColor()
+    !isChecked ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark")
   };
 
   const changeColor = () => {
