@@ -3,7 +3,6 @@ import Toggle from "react-toggle";
 import "react-toggle/style.css";
 
 const DayNightComponent = () => {
-  let setInLocalStorage = true;
   const [isChecked, setIsChecked] = useState(true);
   const [background, setBackground] = useState("#212529");
   const [color, setColor] = useState("#e6e7ee ");
@@ -11,8 +10,10 @@ const DayNightComponent = () => {
   const [filterInvert, setFilterInvert] = useState(100);
   const [shadowOne, setShadowOne] = useState("black");
   const [shadowTwo, setShadowTwo] = useState("rgba(155, 155, 155, 0.5)");
+  let setInLocalStorage = true;
 
   useEffect(() => {
+    !localStorage.getItem("theme") && localStorage.setItem("theme", "light")
     setInLocalStorage && handleChange()
 
   }, []
