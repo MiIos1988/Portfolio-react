@@ -3,6 +3,7 @@ import Toggle from "react-toggle";
 import "react-toggle/style.css";
 
 const DayNightComponent = () => {
+  let setInLocalStorage = true;
   const [isChecked, setIsChecked] = useState(true);
   const [background, setBackground] = useState("#212529");
   const [color, setColor] = useState("#e6e7ee ");
@@ -10,6 +11,12 @@ const DayNightComponent = () => {
   const [filterInvert, setFilterInvert] = useState(100);
   const [shadowOne, setShadowOne] = useState("black");
   const [shadowTwo, setShadowTwo] = useState("rgba(155, 155, 155, 0.5)");
+
+  useEffect(() => {
+    setInLocalStorage && handleChange()
+
+  }, []
+  )
 
   const handleChange = () => {
     setIsChecked(!isChecked);
@@ -19,6 +26,10 @@ const DayNightComponent = () => {
     setFilterInvert(!isChecked ? 100 : 0);
     setShadowOne(isChecked ? "#c7c7c7" : "black");
     setShadowTwo(isChecked ? "#fff" : "rgba(155, 155, 155, 0.5)");
+    changeColor()
+  };
+
+  const changeColor = () => {
     document.documentElement.style.setProperty("--text-color", color);
     document.documentElement.style.setProperty(
       "--text-color-hello",
@@ -31,7 +42,7 @@ const DayNightComponent = () => {
     document.documentElement.style.setProperty("--filter-invert", filterInvert);
     document.documentElement.style.setProperty("--shadow-one", shadowOne);
     document.documentElement.style.setProperty("--shadow-two", shadowTwo);
-  };
+  }
 
   return (
     <div className="dayNight">
