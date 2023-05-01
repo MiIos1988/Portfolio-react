@@ -24,17 +24,17 @@ const HeroComponent = () => {
           to utilize my knowledge and skills in the best possible way for the
           fulfillment of organizational goals.
         </p>
-        <button className="downloadCv btnColor">
+        <a target="_blank" href="https://drive.google.com/file/d/1Xb_8sCzJ7dxuBQJIJKyWMxVhNbre-SVn/view?usp=share_link" className="downloadCv btnColor">
           DOWNLOAD CV{" "}
           <BiDownload className="animate__animated animate__flash animate__infinite animate__slow" />
-        </button>
+        </a>
         <div className="iconSocial">
           <div>
 
           <a href="https://github.com/MiIos1988" target="_blank">
             <BsGithub />
           </a>
-          <a href="https://github.com/MiIos1988" target="_blank">
+          <a href="https://www.linkedin.com/in/milos-sudimac-a36778274/" target="_blank">
             <BsLinkedin />
           </a>
           </div>
