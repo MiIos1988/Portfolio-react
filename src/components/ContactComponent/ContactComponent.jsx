@@ -15,12 +15,12 @@ const ContactComponent = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(input)
+    console.log(input, "no no")
     if (Object.values(input).some(val => !val)) {
       toast.error('You did not fill in all the fields!');
       return;
     }
-
+    console.log("work")
     emailjs.sendForm("service_lh8wnxe",
     "template_w453x57",
     form.current,
@@ -83,6 +83,7 @@ const ContactComponent = () => {
             <div className="position-relative">
               <label className="labMsg p-2">Message</label>
               <textarea
+                defaultValue={null}
                 name="message"
                 className="form-control shadow"
                 placeholder="What do you want to say?"
