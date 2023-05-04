@@ -16,17 +16,21 @@ const ContactComponent = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log(input)
+    if (Object.values(input).some(val => !val)) {
+      toast.error('You did not fill in all the fields!');
+      return;
+    }
 
-    // emailjs.sendForm("service_lh8wnxe",
-    // "template_w453x57",
-    // form.current,
-    // "H2rjiBjduKIpByjJq")
-    //   .then((result) => {
-    //       console.log(result.text);
-    //       form.current.reset();
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm("service_lh8wnxe",
+    "template_w453x57",
+    form.current,
+    "H2rjiBjduKIpByjJq")
+      .then((result) => {
+          console.log(result.text);
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   return (
