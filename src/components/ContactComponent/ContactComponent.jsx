@@ -1,36 +1,59 @@
 import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 import "animate.css";
 import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactComponent = () => {
   const [input, setInput] = useState({
     name: null,
     email: null,
-    message: null
-  })
+    message: null,
+  });
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(input, "no no")
-    if (Object.values(input).some(val => !val)) {
-      toast.error('You did not fill in all the fields!');
+    if (Object.values(input).some((val) => !val)) {
+      toast.error("You did not fill in all the fields!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
       return;
     }
-    console.log("work")
-    emailjs.sendForm("service_lh8wnxe",
-    "template_w453x57",
-    form.current,
-    "H2rjiBjduKIpByjJq")
-      .then((result) => {
-          console.log(result.text);
+    emailjs
+      .sendForm(
+        "service_lh8wnxe",
+        "template_w453x57",
+        form.current,
+        "H2rjiBjduKIpByjJq"
+      )
+      .then(
+        (result) => {
           form.current.reset();
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
+
+    toast.success("The message has been sent.", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   return (
@@ -67,7 +90,9 @@ const ContactComponent = () => {
                 name="name"
                 className="form-control shadow"
                 placeholder="What's your name?"
-                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
+                onChange={(e) =>
+                  setInput({ ...input, [e.target.name]: e.target.value })
+                }
               />
             </div>
             <div className="position-relative">
@@ -77,7 +102,9 @@ const ContactComponent = () => {
                 name="email"
                 className="form-control shadow"
                 placeholder="What's your email?"
-                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
+                onChange={(e) =>
+                  setInput({ ...input, [e.target.name]: e.target.value })
+                }
               />
             </div>
             <div className="position-relative">
@@ -88,10 +115,15 @@ const ContactComponent = () => {
                 className="form-control shadow"
                 placeholder="What do you want to say?"
                 rows="7"
-                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
+                onChange={(e) =>
+                  setInput({ ...input, [e.target.name]: e.target.value })
+                }
               ></textarea>
             </div>
-            <button type="submit" className="btn">Send message</button>
+            <button type="submit" className="btn">
+              Send message
+            </button>
+            <ToastContainer />
           </form>
         </div>
       </article>
