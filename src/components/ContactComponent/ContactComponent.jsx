@@ -1,25 +1,33 @@
 import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 import "animate.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactComponent = () => {
-    const form = useRef();
-    
-      const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm("service_lh8wnxe",
-        "template_w453x57",
-        form.current,
-        "H2rjiBjduKIpByjJq")
-          .then((result) => {
-              console.log(result.text);
-              form.current.reset();
-          }, (error) => {
-              console.log(error.text);
-          });
-      };
+  const [input, setInput] = useState({
+    name: null,
+    email: null,
+    message: null
+  })
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(input)
+
+    // emailjs.sendForm("service_lh8wnxe",
+    // "template_w453x57",
+    // form.current,
+    // "H2rjiBjduKIpByjJq")
+    //   .then((result) => {
+    //       console.log(result.text);
+    //       form.current.reset();
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+  };
 
   return (
     <section id="contact" className="container contact">
@@ -55,6 +63,7 @@ const ContactComponent = () => {
                 name="name"
                 className="form-control shadow"
                 placeholder="What's your name?"
+                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
               />
             </div>
             <div className="position-relative">
@@ -64,6 +73,7 @@ const ContactComponent = () => {
                 name="email"
                 className="form-control shadow"
                 placeholder="What's your email?"
+                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
               />
             </div>
             <div className="position-relative">
@@ -73,6 +83,7 @@ const ContactComponent = () => {
                 className="form-control shadow"
                 placeholder="What do you want to say?"
                 rows="7"
+                onChange={e => setInput({ ...input, [e.target.name]: e.target.value })}
               ></textarea>
             </div>
             <button type="submit" className="btn">Send message</button>
