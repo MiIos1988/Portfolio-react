@@ -9,10 +9,10 @@
 
 
   .heroDiv {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
     padding: 2rem;
-    margin: 23% 0;
+    margin: 28% 0; 
     box-shadow: 6px 6px 12px var(--shadow-one), -6px -6px 12px var(--shadow-two) !important;
     position: relative;
 
@@ -98,6 +98,9 @@
       padding-right: 2rem;
     }
   }
+  a{
+    text-decoration: none;
+  }
 
   .btnColor {
     font-weight: 600;
@@ -119,7 +122,6 @@
   }
 
   .iconSocial {
-    // width: 100% !important;
     
     div{
       text-align: center;
@@ -140,9 +142,8 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1550px) {
   .heroDiv {
-    width: 80% !important;
     margin: 12% 0 !important;
   }
 }
@@ -172,7 +173,7 @@
         padding-right: 0;
       }
 
-      button {
+      a {
         margin: auto;
       }
 

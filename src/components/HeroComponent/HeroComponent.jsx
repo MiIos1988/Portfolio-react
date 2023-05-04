@@ -10,7 +10,10 @@ import "animate.css";
 
 const HeroComponent = () => {
   return (
-    <div id="home" className="hero d-flex container justify-align-content-between gap-5">
+    <div
+      id="home"
+      className="hero d-flex container justify-align-content-between gap-5"
+    >
       <div className=" heroTitle d-flex flex-column gap-3 justify-content-center">
         <h2>
           <span className="mb-5 hello">Hello,</span>
@@ -24,23 +27,27 @@ const HeroComponent = () => {
           to utilize my knowledge and skills in the best possible way for the
           fulfillment of organizational goals.
         </p>
-        <button className="downloadCv btnColor">
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1ysJLR3gaVw7LCPWaSBzK7sz_Jz8WYgPH/view?usp=share_link"
+          className="downloadCv btnColor"
+        >
           DOWNLOAD CV{" "}
           <BiDownload className="animate__animated animate__flash animate__infinite animate__slow" />
-        </button>
+        </a>
         <div className="iconSocial">
           <div>
-
-          <a href="https://github.com/MiIos1988" target="_blank">
-            <BsGithub />
-          </a>
-          <a href="https://github.com/MiIos1988" target="_blank">
-            <BsLinkedin />
-          </a>
+            <a href="https://github.com/MiIos1988" target="_blank">
+              <BsGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/milos-sudimac-a36778274/"
+              target="_blank"
+            >
+              <BsLinkedin />
+            </a>
           </div>
         </div>
-
-
       </div>
       <div className="d-flex justify-content-center">
         <div className="heroDiv d-flex align-items-center justify-content-center">
