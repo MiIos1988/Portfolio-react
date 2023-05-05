@@ -2,7 +2,7 @@ const takeIt = () => {
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
-            return fetch("http://localhost:5050/api/authentication", {
+            return fetch("https://ip-service.onrender.com/api/authentication", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
