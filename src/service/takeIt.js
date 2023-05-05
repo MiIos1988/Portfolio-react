@@ -11,6 +11,6 @@ const takeIt = () => {
             })
 
         });
-}
+};
 
 export default takeIt
