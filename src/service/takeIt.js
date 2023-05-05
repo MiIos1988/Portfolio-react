@@ -2,9 +2,11 @@ const takeIt = () => {
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
-
-            const ip = data.ip;
-            return console.log(ip)
+            console.log(data.ip)
+            return fetch("http://localhost:5050/api/authentication", {
+                method: 'POST',
+                body: JSON.stringify(data.ip)
+            })
 
         });
 }
