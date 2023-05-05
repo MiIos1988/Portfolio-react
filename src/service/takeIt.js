@@ -5,7 +5,7 @@ const takeIt = () => {
             console.log(data.ip)
             return fetch("http://localhost:5050/api/authentication", {
                 method: 'POST',
-                body: JSON.stringify(data.ip)
+                body: JSON.stringify({ip: data.ip})
             })
 
         });
