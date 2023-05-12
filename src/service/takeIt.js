@@ -2,13 +2,15 @@ const takeIt = () => {
     fetch('https://api.ipify.org?format=json')
         .then(response => response.json())
         .then(data => {
-            console.log(data.ip)
-            return fetch("http://localhost:5050/api/authentication", {
+            return fetch("https://ip-service.onrender.com/api/authentication", {
                 method: 'POST',
-                body: JSON.stringify(data.ip)
+                headers: {
+                    'Content-Type': 'application/json'
+                  },
+                body: JSON.stringify({ip: data.ip})
             })
 
         });
-}
+};
 
 export default takeIt
