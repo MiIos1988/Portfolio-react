@@ -6,10 +6,9 @@ const takeIt = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
-                  },
-                body: JSON.stringify({ip: data.ip})
+                },
+                body: JSON.stringify({ ip: data.ip })
             })
-
         });
 };
 
