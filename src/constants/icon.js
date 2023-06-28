@@ -12,6 +12,7 @@ import imgRedux from "../assets/img/icon/redux.png"
 import imgBootstrap from "../assets/img/icon/bootstrap.png"
 import imgPostman from "../assets/img/icon/postman.webp"
 import imgGitHub from "../assets/img/icon/gitHub.png"
+import tailwind from "../assets/img/icon/tailwind.png"
 
 const skillsData = [
     {
@@ -29,6 +30,10 @@ const skillsData = [
     {
         image: imgSass,
         title: "SASS"
+    },
+    {
+        image: tailwind,
+        title: "Tailwindcss"
     },
     {
         image: imgBootstrap,
