@@ -33,7 +33,7 @@ const skillsData = [
     },
     {
         image: tailwind,
-        title: "Tailwindcss"
+        title: "Tailwindcss",
     },
     {
         image: imgBootstrap,
