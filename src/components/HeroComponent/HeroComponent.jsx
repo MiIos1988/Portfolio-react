@@ -29,7 +29,7 @@ const HeroComponent = () => {
         </p>
         <a
           target="_blank"
-          href="https://drive.google.com/file/d/1ysJLR3gaVw7LCPWaSBzK7sz_Jz8WYgPH/view?usp=share_link"
+          href="https://drive.google.com/file/d/1AoMbSh7q8GP7kpFZAEQD8zQHY5-QsIV2/view?usp=sharing"
           className="downloadCv btnColor"
         >
           DOWNLOAD CV{" "}
