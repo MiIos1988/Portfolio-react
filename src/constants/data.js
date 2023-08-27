@@ -24,7 +24,7 @@ const data = [
     image: img2,
     title: "Authentication",
     desc: "By employing authentication and authorization, secure access to privileges is granted based on roles, whether it's for guests, users, or administrators.",
-    tags: ["React", "Redux", "NodeJs", "MongoDB", "JWT", "Express", "Tailwind CSS"],
+    tags: ["React", "Redux", "NodeJs", "MongoDB", "JWT", "Express", "Tailwind"],
     github: "https://github.com/MiIos1988/the_accountant_doo",
     live: "https://the-accountant-doo.vercel.app/",
   },
