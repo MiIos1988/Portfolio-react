@@ -24,10 +24,6 @@ const skillsData = [
         title: "CSS3"
     },
     {
-        image: imgJavascript,
-        title: "JavaScript"
-    },
-    {
         image: imgSass,
         title: "SASS"
     },
@@ -46,6 +42,10 @@ const skillsData = [
     {
         image: imgGitHub,
         title: "GitHub"
+    },
+    {
+        image: imgJavascript,
+        title: "JavaScript"
     },
     {
         image: imgReact,
