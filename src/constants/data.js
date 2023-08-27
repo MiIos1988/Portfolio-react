@@ -1,5 +1,5 @@
 import img1 from "../assets/img/projectImg/shop.png";
-import img2 from "../assets/img/projectImg/bank-app.png";
+import img2 from "../assets/img/projectImg/auth.png";
 import img3 from "../assets/img/projectImg/blog-post.png";
 import img4 from "../assets/img/projectImg/chess.png";
 import img5 from "../assets/img/projectImg/calculator.png";
@@ -22,11 +22,11 @@ const data = [
   },
   {
     image: img2,
-    title: "Bank app",
-    desc: "Entering user data and records of entered data that the user can modify or delete.",
-    tags: ["React"],
-    github: "https://github.com/MiIos1988/bank-app",
-    live: "https://bank-app-lovat.vercel.app/",
+    title: "Authentication",
+    desc: "By employing authentication and authorization, secure access to privileges is granted based on roles, whether it's for guests, users, or administrators.",
+    tags: ["React", "Redux", "NodeJs", "MongoDB", "JWT", "Express"],
+    github: "https://github.com/MiIos1988/the_accountant_doo",
+    live: "https://the-accountant-doo.vercel.app/",
   },
   {
     image: img3,
