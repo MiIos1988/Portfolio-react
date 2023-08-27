@@ -3,7 +3,7 @@ import img2 from "../assets/img/projectImg/auth.png";
 import img3 from "../assets/img/projectImg/blog-post.png";
 import img4 from "../assets/img/projectImg/chess.png";
 import img5 from "../assets/img/projectImg/calculator.png";
-import img6 from "../assets/img/projectImg/stopwatch.png";
+import img6 from "../assets/img/projectImg/convert.png";
 import img7 from "../assets/img/projectImg/quiz.png";
 import img8 from "../assets/img/projectImg/rock-paper-scissors.png";
 import img9 from "../assets/img/projectImg/clock.png";
@@ -38,11 +38,11 @@ const data = [
   },
   {
     image: img6,
-    title: "Stopwatch",
-    desc: "The stopwatch features time measurement, pause and  reset. This project allowed me to practice manipulating component state in React.js and improving my overall React.js development skills.",
-    tags: ["React"],
-    github: "https://github.com/MiIos1988/stopwatch",
-    live: "https://stopwatch-five-beta.vercel.app/",
+    title: "XML to Excel",
+    desc: "The challenge was manually converting XML data into an Excel table, which required a significant amount of time and often led to errors. The project's goal was to develop a tool that would automate this conversion, enabling faster and more accurate data analysis.",
+    tags: ["NodeJs", "Electron"],
+    github: "https://github.com/MiIos1988/Electron-refund-app",
+    live: "#",
   },
   {
     image: img7,
