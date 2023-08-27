@@ -7,7 +7,7 @@ const OneProjectComponent = ({ data }) => {
   return (
     
       <Tilt className="product p-5 mt-5 d-flex flex-column">
-        <a href={live} target="_blank">
+        <a href={live} target={live ? "_blank" : "_self"}>
           <img className="prImg" src={image} alt="" />
         </a>
 
