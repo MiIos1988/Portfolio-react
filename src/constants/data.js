@@ -18,7 +18,7 @@ const data = [
     desc: "Full featured e-commerce store built with MERN stack and Paypal payments API. Admin page to manage customers, products & orders.",
     tags: ["React", "Redux", "NodeJs", "MongoDB", "JWT", "Express", "Bootstrap"],
     github: "https://github.com/MiIos1988/My_shop",
-    live: "https://my-shop-frontend-swart.vercel.app/",
+    live: "https://my-shop-nine-zeta.vercel.app/",
   },
   {
     image: img2,
