@@ -20,7 +20,7 @@ const HeroComponent = () => {
           <br />I Am Milos Sudimac
         </h2>
         <h3 className="animate__flipInX">Web Developer</h3>
-        <p>
+        <p className="textHero">
           Who is looking for a challenging environment, that maintains high
           professional standards, fosters personal growth, provides an
           opportunity for continuous learning, and expects quality results. My
