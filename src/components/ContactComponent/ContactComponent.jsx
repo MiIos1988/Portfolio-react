@@ -58,7 +58,7 @@ const ContactComponent = () => {
 
   return (
     <section id="contact" className="container contact">
-      <h2>Need a web developer</h2>
+      <h2>Need a web developer?</h2>
       <article className="d-flex justify-content-between contactDiv">
         <div className="contactField">
           <h3>Contact me</h3>
