@@ -94,8 +94,8 @@ const data = [
   },
   {
     image: img11,
-    title: "Tic-Tac-Toe Artificial intelligence",
-    desc: "Play Tic-Tac-Toe game against the computer and try to beat the artificial intelligence.",
+    title: "Tic-Tac-Toe vs. Computer",
+    desc: "Test your skills in the game of Tic-Tac-Toe against a formidable computer opponent. Are you skilled enough to beat it?",
     tags: ["Javascript"],
     github: "https://github.com/MiIos1988/Tic-Tac-Toe-artificial-intelligence",
     live: "https://new-tic-tac-toe-chi.vercel.app/",
