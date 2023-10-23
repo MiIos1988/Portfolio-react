@@ -7,7 +7,16 @@ const socket = io.connect("http://localhost:5500");
 
 function App() {
   useEffect(() => {
-    takeIt();
+    const fetchData = async () => {
+      try {
+        const ip = await takeIt();
+        socket.emit("enterRoom", ip);
+      } catch (error) {
+        console.error("Error retrieving data:", error);
+      }
+    };
+  
+    fetchData();
   }, []
   )
   return (
