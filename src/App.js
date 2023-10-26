@@ -35,7 +35,7 @@ function App() {
       <HomePageComponent />
       <button onClick={() => {
         {
-          !query ? socket.emit("sendMsg", { room, msg: "tesdfsdfsdf"}) : socket.emit("sendMsg", { room: Number(query), msg: "tesdfsdfsdf"});
+          !query ? socket.emit("sendMsg", { room, msg: "tesdfsdfsdf"}) : socket.emit("sendMsg", { room: Number(query), msg: "t111111111"});
         }
         
       }
