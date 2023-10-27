@@ -16,11 +16,11 @@ const ChatComponent = ({socket, room}) => {
       }, [socket]);
 
   return (
-    <div className='chat heightChat'>
+    <div className='chat  '>
       {
         chatImage && <img src={chatImg} className='chatImg responsive-image'/>
       }
-      <div className='chatTable '>
+      <div className='chatTable responsive-chat'>
         <div className="header">
        <button className='exitImg'>X</button>
         </div>

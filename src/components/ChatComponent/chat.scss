@@ -13,31 +13,30 @@
           content: url('../../assets/img/icon/smallChatImg.png');
             height: 40px;
             width: 40px;
-
-            .heightChat{
-                height: 60vh;
-            }
+            
         }
       
         @media (min-width: 769px) {
           content: url('../../assets/img/icon/liveChat.png');
-          
-          .heightChat{
-            height: 60vh;
-        }
         }
     }
     .exitImg{
         border: none;
     }
     .chatTable{
-        width: 300px;
         position: fixed;
         bottom: 0;
         right: 0;
         background-color: white;
     }
-    .heightChat{
-        height: 60vh;
+    .responsive-chat {
+        @media (max-width: 768px) {
+            height: 100vh;  
+            width: 100vw;
+          }
+        
+          @media (min-width: 769px) {
+            width: 350px;
+          }
     }
 }
