@@ -7,7 +7,8 @@ const ChatComponent = ({socket, room}) => {
 
     const [queryParams] = useSearchParams();
     const query = queryParams.get("room");
-    const [chatImage, seChatImage] = useState(true)
+    const [chatImage, seChatImage] = useState(true);
+    const [currentMessage, setCurrentMessage] = useState("");
 
     useEffect(() => {
         socket.on("receiveMessage", (data) => {
@@ -25,19 +26,14 @@ const ChatComponent = ({socket, room}) => {
        <button className='exitImg'>X</button>
         </div>
         <div></div>
-        <input type="text" />
-        <button>sd
+        <input type="text" onChange={(e) => setCurrentMessage(e.target.value)}/>
+        <button onClick={() => {
+           !query ? socket.emit("sendMsg", { room, msg: currentMessage}) : socket.emit("sendMsg", { room: Number(query), msg: currentMessage});
+        }
+        }>sd
 
         </button>
       </div>
-      
-       {/* <button onClick={() => {
-        {
-          !query ? socket.emit("sendMsg", { room, msg: "tesdfsdfsdf"}) : socket.emit("sendMsg", { room: Number(query), msg: "t111111111"});
-        }
-        
-      }
-      }>Click</button> */}
     </div>
   )
 }
