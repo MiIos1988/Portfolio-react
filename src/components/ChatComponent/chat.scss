@@ -5,6 +5,76 @@
         bottom: 10px;
         right: 10px;
     }
+    .chatTable{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      color: white;
+      background-color: #18bcdf;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      p{
+        margin-bottom: 0;
+      }
+      button{
+        color: white;
+        background-color: inherit;
+      }
+    }
+    .chatBody{
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      div{
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        color: white;
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .client{
+      width: 60%;
+      background-color: #169ec9;
+      
+      margin-left: auto;
+    }
+    .admin{
+      width: 60%;
+      background-color: #22c55e;
+    }
+    .inputAndBtn{
+      display: flex;
+      box-shadow: 0px -10px 10px -10px black;
+      padding: 10px;
+      input, input:focus{
+        border: none;
+        outline: none;
+      }
+      button{
+        background-color: white;
+        padding: 5px;
+        border: none;
+      }
+
+    }
+    .inputField{
+      padding: 2px;
+      width: 100%;
+    }
+
     .responsive-image {
         max-width: 100%; 
           
@@ -23,12 +93,7 @@
     .exitImg{
         border: none;
     }
-    .chatTable{
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        background-color: white;
-    }
+   
     .responsive-chat {
         @media (max-width: 768px) {
             height: 100vh;  
@@ -39,12 +104,5 @@
             width: 350px;
           }
     }
-    .client{
-      background-color: #169ec9;
-      color: white;
-      margin-left: auto;
-    }
-    .admin{
-      background-color: #D2D4D4;
-    }
+    
 }

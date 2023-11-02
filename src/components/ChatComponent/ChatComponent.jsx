@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import chatImg from "../../assets/img/icon/liveChat.png";
 import smallImg from "../../assets/img/icon/smallChatImg.png";
 import ScrollToBottom from "react-scroll-to-bottom";
+import { BsFillSendFill } from "react-icons/bs";
 
 const ChatComponent = ({ socket, room }) => {
   const [queryParams] = useSearchParams();
@@ -10,6 +11,7 @@ const ChatComponent = ({ socket, room }) => {
   const [chatImage, seChatImage] = useState(true);
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
+  const inputRef = useRef();
 
   useEffect(() => {
     socket.on("receiveMessage", (data) => {
@@ -17,30 +19,13 @@ const ChatComponent = ({ socket, room }) => {
     });
   }, [socket]);
 
-  return (
-    <div className="chat  ">
-      {chatImage && <img src={chatImg} className="chatImg responsive-image" />}
-      <div className="chatTable responsive-chat">
-        <div className="header">
-          <button className="exitImg">X</button>
-        </div>
-        <ScrollToBottom>
-          {messageList.map((message, i) => {
-            return (
-              <div key={i} className={ message.author === "admin" ? "admin" : "client"}>
-                <p>{message.msg}</p>
-              </div>
-            );
-          })}
-        </ScrollToBottom>
-        <input
-          type="text"
-          value={currentMessage}
-          onChange={(e) => setCurrentMessage(e.target.value)}
-        />
-        <button
-          onClick={() => {
-            !query
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [messageList]
+  )
+
+  const sendMessage = () => {
+    !query
               ? socket.emit("sendMsg", { room, msg: currentMessage, author: "client" })
               : socket.emit("sendMsg", {
                   room: Number(query),
@@ -49,10 +34,43 @@ const ChatComponent = ({ socket, room }) => {
                 });
             setMessageList((list) => [...list, query ? {msg: currentMessage, author: "admin"} : {msg: currentMessage, author: "client"}]);
             setCurrentMessage("");
+  }
+
+  return (
+    <div className="chat  ">
+      {chatImage && <img src={chatImg} className="chatImg responsive-image" />}
+      <div className="chatTable responsive-chat">
+        <div className="header">
+          <p>Live Chat</p>
+          <button className="exitImg">X</button>
+        </div>
+        <ScrollToBottom className="chatBody">
+          {messageList.map((message, i) => {
+            return (
+              <div key={i} className={ message.author === "admin" ? "admin " : "client"}>
+                <p>{message.msg}</p>
+              </div>
+            );
+          })}
+        </ScrollToBottom>
+        <div className="inputAndBtn">
+        <input
+          className="inputField"
+          ref={inputRef}
+          type="text"
+          value={currentMessage}
+          placeholder="Write a message and press enter..."
+          onChange={(e) => setCurrentMessage(e.target.value)}
+          onKeyPress={(event) => {
+            event.key === "Enter" && sendMessage();
           }}
+        />
+        <button
+          onClick={() => sendMessage()}
         >
-          sd
+           <BsFillSendFill/>
         </button>
+        </div>
       </div>
     </div>
   );
