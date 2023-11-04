@@ -4,6 +4,9 @@
         position: fixed;
         bottom: 10px;
         right: 10px;
+        &:hover{
+          cursor: pointer;
+        }
     }
     .chatTable{
       position: fixed;
@@ -74,6 +77,13 @@
       padding: 2px;
       width: 100%;
     }
+    .show{
+      display: block;
+    }
+    .hide{
+      display: none !important;
+    }
+
 
     .responsive-image {
         max-width: 100%; 
