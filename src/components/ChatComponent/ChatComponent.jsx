@@ -8,7 +8,6 @@ import { BsFillSendFill } from "react-icons/bs";
 const ChatComponent = ({ socket, room }) => {
   const [queryParams] = useSearchParams();
   const query = queryParams.get("room");
-  const [chatImage, seChatImage] = useState(true);
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
   const [show, setShow] = useState(false);
@@ -16,10 +15,25 @@ const ChatComponent = ({ socket, room }) => {
   const inputRef = useRef();
 
   useEffect(() => {
+    query && socket.emit("chat-visibility",  {room: Number(query), chat: true})
+  },[]
+  );
+
+  useEffect(() => {
     socket.on("receiveMessage", (data) => {
+      console.log('change socket')
+
       setMessageList((list) => [...list, data]);
     });
+
+    socket.on("showChat", data => {
+      console.log(data)
+      setShowImgChat(data)
+    })
+
   }, [socket]);
+
+  
 
   useEffect(() => {
     inputRef.current.focus();
@@ -44,15 +58,15 @@ const ChatComponent = ({ socket, room }) => {
 
   return (
     <div className="chat ">
-      {chatImage && (
+      
         <img
           src={chatImg}
           className={`chatImg responsive-image ${
-            showImgChat ? "show" : "hide"
+            showImgChat ? "show" : query ? "show" : "hide"
           }`}
           onClick={() => setShow((prev) => !prev)}
         />
-      )}
+   
       <div className={`chatTable responsive-chat ${show ? "show" : "hide"}`}>
         <div className="header">
           <p>Live Chat with Milos</p>
