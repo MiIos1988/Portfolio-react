@@ -17,9 +17,9 @@ const ChatComponent = ({ socket, room }) => {
   const inputRef = useRef();
 
   useEffect(() => {
-    query && socket.emit("chat-visibility",  {room: Number(query), chat: true})
-  },[]
-  );
+    query &&
+      socket.emit("chat-visibility", { room: Number(query), chat: true });
+  }, []);
 
   useEffect(() => {
     socket.on("receiveMessage", (data) => {
@@ -27,10 +27,13 @@ const ChatComponent = ({ socket, room }) => {
       setMessageList((list) => [...list, data]);
     });
 
-    socket.on("showChat", data => {
-      setShowImgChat(data)
-    })
+    socket.on("showChat", (data) => {
+      setShowImgChat(data);
+    });
 
+    socket.on("clientDisconnect", (msg) => {
+      setMessageList((list) => [...list, msg]);
+    });
   }, [socket]);
 
   useEffect(() => {
@@ -56,26 +59,31 @@ const ChatComponent = ({ socket, room }) => {
 
   return (
     <div className="chat ">
-      {
-            (!show && newMsg) && ( <div className="divMsg" onClick={() => setShow(true)}>
-              <p className="msg animate__animated animate__headShake animate__infinite">NEW MESSAGE</p>
-            </div>)
-          }
-        <img
-          src={chatImg}
-          className={`chatImg responsive-image ${
-            showImgChat ? "show" : query ? "show" : "hide"
-          }`}
-          onClick={() => setShow((prev) => !prev)}
-        />
-   
+      {!show && newMsg && (
+        <div className="divMsg" onClick={() => setShow(true)}>
+          <p className="msg animate__animated animate__headShake animate__infinite">
+            NEW MESSAGE
+          </p>
+        </div>
+      )}
+      <img
+        src={chatImg}
+        className={`chatImg responsive-image ${
+          showImgChat ? "show" : query ? "show" : "hide"
+        }`}
+        onClick={() => setShow((prev) => !prev)}
+      />
+
       <div className={`chatTable responsive-chat ${show ? "show" : "hide"}`}>
         <div className="header">
           <p>Live Chat with Milos</p>
-          <button className="exitImg" onClick={() => {
-            setShow((prev) => !prev)
-            setNewMsg(false);
-          }}>
+          <button
+            className="exitImg"
+            onClick={() => {
+              setShow((prev) => !prev);
+              setNewMsg(false);
+            }}
+          >
             X
           </button>
         </div>
@@ -106,8 +114,6 @@ const ChatComponent = ({ socket, room }) => {
           <button onClick={() => sendMessage()}>
             <BsFillSendFill />
           </button>
-          
-          
         </div>
       </div>
     </div>

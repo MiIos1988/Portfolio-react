@@ -17,7 +17,7 @@ function App() {
     const fetchData = async () => {
       try {
         const ip = await takeIt();
-        socket.emit("enterRoom", {ip, query, room});
+       !query ? socket.emit("enterRoom", {ip, query, room}) : socket.emit("enterRoom", {ip, query, room: Number(query)})
       } catch (error) {
         console.error("Error retrieving data:", error);
       }
