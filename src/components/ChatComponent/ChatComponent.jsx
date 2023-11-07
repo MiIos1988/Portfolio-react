@@ -64,6 +64,7 @@ const ChatComponent = ({ socket, room }) => {
           <p className="msg animate__animated animate__headShake animate__infinite">
             NEW MESSAGE
           </p>
+          <p className="resMsg animate__animated animate__headShake animate__infinite">1</p>
         </div>
       )}
       <img
