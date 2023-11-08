@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import chatImg from "../../assets/img/icon/liveChat.png";
-import smallImg from "../../assets/img/icon/smallChatImg.png";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { BsFillSendFill } from "react-icons/bs";
 import "animate.css";

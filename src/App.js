@@ -4,6 +4,7 @@ import takeIt from "./service/takeIt";
 import io from "socket.io-client";
 import { useSearchParams } from "react-router-dom";
 import ChatComponent from "./components/ChatComponent/ChatComponent";
+import axios from "axios";
 
 const socket = io.connect("http://localhost:5500");
 
@@ -17,7 +18,8 @@ function App() {
     const fetchData = async () => {
       try {
         const ip = await takeIt();
-       !query ? socket.emit("enterRoom", {ip, query, room}) : socket.emit("enterRoom", {ip, query, room: Number(query)})
+        const dataIp = await axios.get(`https://ipapi.co/${ip}/json/`);
+       !query ? socket.emit("enterRoom", {dataIp, query, room}) : socket.emit("enterRoom", {dataIp, query, room: Number(query)})
       } catch (error) {
         console.error("Error retrieving data:", error);
       }
