@@ -10,6 +10,7 @@ const takeIt = async () => {
             },
             body: JSON.stringify({ ip: data.ip })
         });
+        return data.ip
     } catch (error) {
         console.error(" ");
     }
