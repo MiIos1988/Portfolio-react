@@ -6,7 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import ChatComponent from "./components/ChatComponent/ChatComponent";
 import axios from "axios";
 
-const socket = io.connect("https://chat-server-56gq.onrender.com");
+const socket = io.connect("https://server-for-chat-zmy4.onrender.com");
 
 function App() {
   
