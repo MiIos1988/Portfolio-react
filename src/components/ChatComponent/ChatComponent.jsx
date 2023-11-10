@@ -4,7 +4,7 @@ import chatImg from "../../assets/img/icon/liveChat.png";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { BsFillSendFill } from "react-icons/bs";
 import "animate.css";
-import faceImg from "../../assets/img/face/Milos.png"
+import faceImg from "../../assets/img/face/Milos.png";
 
 const ChatComponent = ({ socket, room }) => {
   const [queryParams] = useSearchParams();
@@ -64,7 +64,9 @@ const ChatComponent = ({ socket, room }) => {
           <p className="msg animate__animated animate__headShake animate__infinite">
             NEW MESSAGE
           </p>
-          <p className="resMsg animate__animated animate__headShake animate__infinite">1</p>
+          <p className="resMsg animate__animated animate__headShake animate__infinite">
+            1
+          </p>
         </div>
       )}
       <img
@@ -92,16 +94,18 @@ const ChatComponent = ({ socket, room }) => {
           {messageList.map((message, i) => {
             return (
               <div className="holdMsg">
-                <img src={faceImg} className="faceImg" />
-              <div
-                key={i}
-                className={message.author === "admin" ? "admin " : "client"}
-              >
-                <p>{message.msg}</p>
-                {
-                  message.author === "admin" && <p className="adminName">Milos</p>
-                }
-              </div>
+                {message.author === "admin" && (
+                  <img src={faceImg} className="faceImg" />
+                )}
+                <div
+                  key={i}
+                  className={message.author === "admin" ? "admin " : "client"}
+                >
+                  <p>{message.msg}</p>
+                  {message.author === "admin" && (
+                    <p className="adminName">Milos</p>
+                  )}
+                </div>
               </div>
             );
           })}
