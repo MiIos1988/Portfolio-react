@@ -3,8 +3,9 @@ import { useSearchParams } from "react-router-dom";
 import chatImg from "../../assets/img/icon/liveChat.png";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { BsFillSendFill } from "react-icons/bs";
-import "animate.css";
 import faceImg from "../../assets/img/face/Milos.png";
+import songMsg from "../../assets/song/message.mp3"
+import "animate.css";
 
 const ChatComponent = ({ socket, room }) => {
   const [queryParams] = useSearchParams();
@@ -15,6 +16,7 @@ const ChatComponent = ({ socket, room }) => {
   const [newMsg, setNewMsg] = useState(false);
   const [showImgChat, setShowImgChat] = useState(false);
   const inputRef = useRef();
+  const audioRef = useRef(null);
 
   useEffect(() => {
     query &&
@@ -25,6 +27,7 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
+      !show && audioRef.current.play();
     });
 
     socket.on("showChat", (data) => {
@@ -67,6 +70,7 @@ const ChatComponent = ({ socket, room }) => {
           <p className="resMsg animate__animated animate__headShake animate__infinite">
             1
           </p>
+          <audio ref={audioRef} src={songMsg}/>
         </div>
       )}
       <img
