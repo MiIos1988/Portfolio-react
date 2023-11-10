@@ -4,6 +4,7 @@ import chatImg from "../../assets/img/icon/liveChat.png";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { BsFillSendFill } from "react-icons/bs";
 import "animate.css";
+import faceImg from "../../assets/img/face/Milos.png"
 
 const ChatComponent = ({ socket, room }) => {
   const [queryParams] = useSearchParams();
@@ -90,11 +91,17 @@ const ChatComponent = ({ socket, room }) => {
         <ScrollToBottom className="chatBody">
           {messageList.map((message, i) => {
             return (
+              <div className="holdMsg">
+                <img src={faceImg} className="faceImg" />
               <div
                 key={i}
                 className={message.author === "admin" ? "admin " : "client"}
               >
                 <p>{message.msg}</p>
+                {
+                  message.author === "admin" && <p className="adminName">Milos</p>
+                }
+              </div>
               </div>
             );
           })}
