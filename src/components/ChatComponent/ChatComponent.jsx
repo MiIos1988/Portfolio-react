@@ -24,6 +24,12 @@ const ChatComponent = ({ socket, room }) => {
   }, []);
 
   useEffect(() => {
+     console.log("show", show)
+      console.log("newMsg", newMsg)
+  },[show, newMsg]
+  )
+
+  useEffect(() => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
@@ -100,12 +106,11 @@ const ChatComponent = ({ socket, room }) => {
         <ScrollToBottom className="chatBody">
           {messageList.map((message, i) => {
             return (
-              <div className="holdMsg">
+              <div className="holdMsg" key={i}>
                 {message.author === "admin" && (
                   <img src={faceImg} className="faceImg" />
                 )}
-                <div
-                  key={i}
+                <div                  
                   className={message.author === "admin" ? "admin " : "client"}
                 >
                   <p>{message.msg}</p>
