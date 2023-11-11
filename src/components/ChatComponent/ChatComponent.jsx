@@ -27,7 +27,7 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
-      (!show && newMsg) && audioRef.current.play();
+      (!show && newMsg) && playSound();
     });
 
     socket.on("showChat", (data) => {
@@ -58,6 +58,11 @@ const ChatComponent = ({ socket, room }) => {
         : { msg: currentMessage, author: "client" },
     ]);
     setCurrentMessage("");
+  };
+
+  const playSound = () => {
+    const audio = new Audio(songMsg);
+    audio.play();
   };
 
   return (
