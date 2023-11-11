@@ -16,7 +16,6 @@ const ChatComponent = ({ socket, room }) => {
   const [newMsg, setNewMsg] = useState(false);
   const [showImgChat, setShowImgChat] = useState(false);
   const inputRef = useRef();
-  const audioRef = useRef(null);
 
   useEffect(() => {
     query &&
@@ -27,8 +26,6 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
-      console.log(!show, newMsg, "Show - msg")
-      (!show && newMsg) && playSound();
     });
 
     socket.on("showChat", (data) => {
@@ -59,12 +56,6 @@ const ChatComponent = ({ socket, room }) => {
         : { msg: currentMessage, author: "client" },
     ]);
     setCurrentMessage("");
-  };
-
-  const playSound = () => {
-    const audio = new Audio(songMsg);
-    audio.play();
-    console.log("AUDIO OK")
   };
 
   return (
