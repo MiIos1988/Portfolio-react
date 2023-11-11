@@ -27,6 +27,8 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
+      console.log(!show, "Show------")
+      console.log(newMsg, "Msg----")
       (!show && newMsg) && playSound();
     });
 
