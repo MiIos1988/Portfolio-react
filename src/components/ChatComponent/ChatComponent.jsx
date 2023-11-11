@@ -63,6 +63,7 @@ const ChatComponent = ({ socket, room }) => {
   const playSound = () => {
     const audio = new Audio(songMsg);
     audio.play();
+    console.log("AUDIO OK")
   };
 
   return (
