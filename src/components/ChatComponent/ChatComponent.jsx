@@ -24,18 +24,10 @@ const ChatComponent = ({ socket, room }) => {
   }, []);
 
   useEffect(() => {
-     console.log("show", show)
-      console.log("newMsg", newMsg)
-  },[show, newMsg]
-  )
-
-  useEffect(() => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
-      console.log("show ----", show)
-      console.log("newMsg ---", newMsg)
-      (!show && newMsg) ? console.log("working") : null
+      (!show && newMsg) && audioRef.current.play();
     });
 
     socket.on("showChat", (data) => {
