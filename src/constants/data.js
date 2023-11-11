@@ -9,7 +9,7 @@ import img8 from "../assets/img/projectImg/rock-paper-scissors.png";
 import img9 from "../assets/img/projectImg/clock.png";
 import img10 from "../assets/img/projectImg/hangman.png";
 import img11 from "../assets/img/projectImg/tic-tac-toe.png";
-import img12 from "../assets/img/projectImg/slider.png";
+import img12 from "../assets/img/projectImg/Chat-app.png";
 
 const data = [
   {
@@ -35,6 +35,14 @@ const data = [
     tags: ["NodeJs", "Electron"],
     github: "https://github.com/MiIos1988/Electron-refund-app",
     live: "",
+  },
+  {
+    image: img12,
+    title: "Live Chat",
+    desc: 'Live Chat facilitates real-time messaging interactions, enabling visitors to communicate and exchange information instantly, powered by Socket.io for swift and dynamic message exchange.',
+    tags: ["React", "NodeJs","Express","Socket.io","Tailwind"],
+    github: "https://github.com/MiIos1988/Chat_app.git",
+    live: "https://chat-app-beta-roan.vercel.app/",
   },
   {
     image: img3,
@@ -99,14 +107,6 @@ const data = [
     tags: ["Javascript"],
     github: "https://github.com/MiIos1988/Tic-Tac-Toe-artificial-intelligence",
     live: "https://new-tic-tac-toe-chi.vercel.app/",
-  },
-  {
-    image: img12,
-    title: "Gallery",
-    desc: "As part of my portfolio, I created an gallery using HTML, CSS, and JavaScript. The gallery features a responsive layout with arrow buttons that allow users to cycle through the images.",
-    tags: ["Javascript"],
-    github: "https://github.com/MiIos1988/background-slider",
-    live: "https://background-slider-opal.vercel.app/",
   },
 ];
 
