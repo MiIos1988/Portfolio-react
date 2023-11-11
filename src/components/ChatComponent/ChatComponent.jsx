@@ -27,8 +27,7 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
-      console.log(!show, "Show------")
-      console.log(newMsg, "Msg----")
+      console.log(!show, newMsg, "Show - msg")
       (!show && newMsg) && playSound();
     });
 
@@ -70,7 +69,6 @@ const ChatComponent = ({ socket, room }) => {
 
   return (
     <div className="chat ">
-      <audio ref={audioRef} src={songMsg} />
       {!show && newMsg && (
         <div className="divMsg" onClick={() => setShow(true)}>
           <p className="msg animate__animated animate__headShake animate__infinite">
