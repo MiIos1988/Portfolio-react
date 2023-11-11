@@ -36,7 +36,7 @@ const ChatComponent = ({ socket, room }) => {
       console.log("show ----", show)
       console.log("newMsg ---", newMsg)
       !show && console.log("working");
-      !show && newMsg && audioRef.current.play();
+      (!show && newMsg) ? audioRef.current.play() : null
     });
 
     socket.on("showChat", (data) => {
