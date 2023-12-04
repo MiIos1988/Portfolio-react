@@ -5,6 +5,7 @@ import io from "socket.io-client";
 import { useSearchParams } from "react-router-dom";
 import ChatComponent from "./components/ChatComponent/ChatComponent";
 import axios from "axios";
+import moment from 'moment-timezone';
 
 const socket = io.connect("https://server-for-chat-zmy4.onrender.com");
 
@@ -19,7 +20,8 @@ function App() {
       try {
         const ip = await takeIt();
         const dataIp = await axios.get(`https://ipapi.co/${ip}/json/`);
-       !query ? socket.emit("enterRoom", {dataIp, query, room}) : socket.emit("enterRoom", {dataIp, query, room: Number(query)})
+        const time = moment.tz(new Date(), 'Europe/Belgrade').format('HH:mm:ss');
+       !query ? socket.emit("enterRoom", {dataIp, query, room, time}) : socket.emit("enterRoom", {dataIp, query, room: Number(query), time})
       } catch (error) {
         console.error("Error retrieving data:", error);
       }
