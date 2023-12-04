@@ -26,7 +26,7 @@ const ChatComponent = ({ socket, room }) => {
     socket.on("receiveMessage", (data) => {
       setNewMsg(true);
       setMessageList((list) => [...list, data]);
-      playSongMsg();
+      // playSongMsg();
     });
 
     socket.on("showChat", (data) => {
@@ -68,8 +68,8 @@ const ChatComponent = ({ socket, room }) => {
   return (
     <div className="chat ">
       {!show && newMsg && (
-        <div className="divMsg" onClick={() => setShow(true)}>
-          <p className="msg animate__animated animate__headShake animate__infinite">
+        <div className="divMsg animate__animated animate__bounceInDown" onClick={() => setShow(true)}>
+          <p className="msg animate__animated animate__headShake animate__infinite ">
             NEW MESSAGE
           </p>
           <p className="resMsg animate__animated animate__headShake animate__infinite">
