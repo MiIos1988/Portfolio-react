@@ -62,10 +62,10 @@ const data = [
   },
   {
     image: img8,
-    title: "Rock paper scissors",
+    title: "Rock paper scissors game",
     desc: "The game allows users to play against the computer, selecting their choice of rock, paper, or scissors.  Additionally, the game keeps track of the user's score and displays it at the end of each round. ",
-    tags: ["React"],
-    github: "https://github.com/MiIos1988/rock-paper-scissors",
+    tags: ["React", "TypeScript"],
+    github: "https://github.com/MiIos1988/rock-paper-scissors-typescript.git",
     live: "https://rock-paper-scissors-ten-pi.vercel.app/",
   },
   {
