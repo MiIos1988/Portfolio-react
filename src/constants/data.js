@@ -2,7 +2,7 @@ import img1 from "../assets/img/projectImg/shop.png";
 import img2 from "../assets/img/projectImg/auth.png";
 import img3 from "../assets/img/projectImg/blog-post.png";
 import img4 from "../assets/img/projectImg/chess.png";
-import img5 from "../assets/img/projectImg/calculator.png";
+import img5 from "../assets/img/projectImg/overtime.png";
 import img6 from "../assets/img/projectImg/convert.png";
 import img7 from "../assets/img/projectImg/quiz.png";
 import img8 from "../assets/img/projectImg/rock-paper-scissors.png";
@@ -12,6 +12,14 @@ import img11 from "../assets/img/projectImg/tic-tac-toe.png";
 import img12 from "../assets/img/projectImg/Chat-app.png";
 
 const data = [
+  {
+    image: img5,
+    title: "Overtime tracking app",
+    desc: "This application provides a simple way to track overtime hours, allowing users to monitor the total number of extra hours worked within a selected month.",
+    tags: ["React", "TypeScript", "AWS", "NodeJs", "Express", "MongoDB", "Tailwind"],
+    github: "https://github.com/MiIos1988/overtime_tracker.git",
+    live: "https://overtime-tracker.vercel.app/",
+  },
   {
     image: img1,
     title: "E-shop",
@@ -99,14 +107,6 @@ const data = [
     tags: ["JavaScript"],
     github: "https://github.com/MiIos1988/Chess",
     live: "https://chess-six-sage.vercel.app/",
-  },
-  {
-    image: img5,
-    title: "Calculator",
-    desc: "Calculator App with vanilla JS. Simple app with basic arithmetic operations.",
-    tags: ["JavaScript"],
-    github: "https://github.com/MiIos1988/calculator",
-    live: "https://calculate-navy.vercel.app/",
   },
 ];
 
