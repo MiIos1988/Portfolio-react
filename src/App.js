@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import HomePageComponent from "./pages/HomePageComponent";
-import takeIt from "./service/takeIt";
+import takeIp from "./service/takeIp";
 import io from "socket.io-client";
 import { useSearchParams } from "react-router-dom";
 import ChatComponent from "./components/ChatComponent/ChatComponent";
@@ -18,9 +18,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const ip = await takeIt();
+        const ip = await takeIp();
         const dataIp = await axios.get(`https://ipapi.co/${ip}/json/`);
         const time = moment.tz(new Date(), 'Europe/Belgrade').format('HH:mm:ss');
+        console.log(time)
        !query ? socket.emit("enterRoom", {dataIp, query, room, time}) : socket.emit("enterRoom", {dataIp, query, room: Number(query), time})
       } catch (error) {
         console.error("Error retrieving data:", error);

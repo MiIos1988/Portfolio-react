@@ -1,4 +1,4 @@
-const takeIt = async () => {
+const takeIp = async () => {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
@@ -16,4 +16,4 @@ const takeIt = async () => {
     }
 };
 
-export default takeIt;
+export default takeIp;
